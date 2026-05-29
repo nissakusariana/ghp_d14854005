@@ -22,7 +22,7 @@ df_2023 %>%
 
 
 #Calculate total cases by county in 2023
-df_county_2023 <- df_2023 %>%
+df_county_2023 <- df %>%
   group_by(county_name) %>%
   summarise(total_cases = sum(case_number, na.rm = TRUE)) %>%
   arrange(desc(total_cases))
