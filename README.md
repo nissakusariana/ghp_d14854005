@@ -17,3 +17,5 @@ Method:
 The analysis data using R (4.4.1 version)
 
 Result:
+
+These results show that in 2023 there were 26661 new cases of dengue in Taiwan, with Tainan City having the highest number of cases (21537 new cases) and Chiayi City the lowest (42 new cases).
