@@ -1,0 +1,30 @@
+#External packages used in this analysis
+library(readr)    
+library(dplyr)    
+
+#Setting up working directory
+setwd("D:/NISSA's/S3/TAIWAN/Global Health Program/Course/2026. Spring/Principle and Application in Health Research Methods/Assign 3")
+
+
+#Load dataset
+df<-read.csv("dengue_assignment.csv",header = TRUE, stringsAsFactors = F)
+
+
+#Calculate total cases reported in 2023
+#Dengue data in 2023
+df_2023 <- df %>%
+  filter(year == 2023)
+summary(df_2023)
+
+#Total dengue cases in 2023
+df_2023 %>%
+  summarise(total_cases = sum(case_number, na.rm = TRUE))
+
+
+#Calculate total cases by county in 2023
+df_county_2023 <- df_2023 %>%
+  group_by(county_name) %>%
+  summarise(total_cases = sum(case_number, na.rm = TRUE)) %>%
+  arrange(desc(total_cases))
+
+print(df_county_2023)
