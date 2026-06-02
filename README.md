@@ -12,7 +12,7 @@ The Dengue dataset is an open dataset provided by the Taiwan Centres for Disease
 
 Method:
 
-The analysis data using R (4.4.1 version)
+The data analysis using R (4.4.1 version)
 
 Result:
 
